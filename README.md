@@ -1,5 +1,9 @@
 # Customizable Web3Button for thirdweb
 
+
+# REPO IN PROGRESS!!!!
+
+
 Welcome to the Customizable Web3Button project! This project provides an intuitive interface for creating a custom button to interact with Ethereum smart contracts. This React component is perfect for developers who need to quickly generate buttons for their DApps.
 
 ![screencapture-localhost-3000-2023-04-27-19_05_22](https://user-images.githubusercontent.com/106103625/235013049-6b5af32c-27e6-4b31-8f79-ee68b1d667f8.png)
