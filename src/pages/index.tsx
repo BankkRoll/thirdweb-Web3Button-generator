@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Web3Button } from "@thirdweb-dev/react";
 import { CallOverrides, ethers } from "ethers";
 
+type ActionFn = (contract: any) => void;
 
 const Home: React.FC = () => {
   const [contractAddress, setContractAddress] = useState<string>(`0x0000000000000000000000000`);
@@ -360,7 +361,7 @@ const Home: React.FC = () => {
       <div className="flex justify-center">
         <Web3Button
           contractAddress={checkboxes.contractAddress ? contractAddress : ""}
-          action={checkboxes.action ? action : undefined}
+          action={checkboxes.action ? action as unknown as ActionFn : () => {}}
           theme={checkboxes.theme ? theme : undefined}
           contractAbi={checkboxes.contractAbi ? contractAbi : undefined}
           overrides={checkboxes.overrides ? overrides : undefined}
