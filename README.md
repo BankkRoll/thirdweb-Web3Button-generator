@@ -33,7 +33,7 @@ To get the project up and running on your local machine for development and test
 1. Clone the repository to your local machine
 
 ```bash
-git clone https://github.com/BankkRoll/thirdweb-connect-wallet-generator.git
+git clone https://github.com/BankkRoll/thirdweb-Web3Button-generator.git
 ```
 
 2. Navigate into the cloned repository
