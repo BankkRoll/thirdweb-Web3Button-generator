@@ -83,8 +83,7 @@ const Home: React.FC = () => {
     <div className="flex min-h-screen bg-gradient-to-br from-purple-700 to-purple-900 px-10 py-12 justify-center gap-10">
       <div className="w-1/3 space-y-2 text-black">
         <div className="flex items-center">
-          <input type="checkbox" checked={checkboxes.contractAddress} onChange={() => handleCheckboxChange('contractAddress')} />
-          <label className="block ml-2 w-full">
+          <label className="block ml-5 w-full">
             <span className="text-black font-bold text-2xl ml-2">Contract Address</span>
             <input
               className="mt-1 block w-full p-2 border-2 border-gray-300 rounded"
@@ -371,10 +370,8 @@ const Home: React.FC = () => {
     >
       Execute Action
     </Web3Button>
-    
-
   </div>
-  </div>
+ </div>
 </div>
   );
 };
