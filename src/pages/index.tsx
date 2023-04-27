@@ -327,8 +327,7 @@ const Home: React.FC = () => {
             </>
           )}
         </div>
-
-    </div>
+      </div>
 
 <div className="w-1/2 h-fit pb-10 text-white rounded overflow-auto">
     <div className="bg-black min-h-[620px] mb-10 pb-10 text-white rounded overflow-auto">
@@ -338,15 +337,15 @@ const Home: React.FC = () => {
           <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
           <div className="w-3 h-3 bg-green-500 rounded-full"></div>
         </div>
+        <div className="text-md font-mono">Web3Button</div>
         <button
-  onClick={copyToClipboard}
-  className={`p-2 rounded text-white font-bold bg-gray-600 ${
-    copied ? "bg-green-500" : "hover:bg-gray-700"
-  }`}
->
-  {copied ? "Copied!" : "Copy"}
-</button>
-        <div className="text-sm font-mono">Web3Button</div>
+            onClick={copyToClipboard}
+            className={`p-2 rounded text-white font-bold bg-gray-600 ${
+              copied ? "bg-green-500" : "hover:bg-gray-700"
+            }`}
+          >
+            {copied ? "Copied!" : "Copy"}
+          </button>
       </div>
       <pre className="text-white font-mono text-sm p-6">
         {`<Web3Button\n  `}
@@ -356,23 +355,24 @@ const Home: React.FC = () => {
         {`</Web3Button>`}
       </pre>
   </div>
+    <div className="italic mx-auto flex justify-center mb-4">Note: this playground uses the Goerli test network.</div>
 
-  <div className="flex justify-center">
-    <Web3Button
-      contractAddress={checkboxes.contractAddress ? contractAddress : ""}
-      action={checkboxes.action ? action : undefined}
-      theme={checkboxes.theme ? theme : undefined}
-      contractAbi={checkboxes.contractAbi ? contractAbi : undefined}
-      overrides={checkboxes.overrides ? overrides : undefined}
-      onSuccess={checkboxes.onSuccess ? () => alert(onSuccess()) : undefined}
-      onError={checkboxes.onError ? () => alert(onError()) : undefined}
-      className={checkboxes.className ? className : undefined}
-    >
-      Execute Action
-    </Web3Button>
+      <div className="flex justify-center">
+        <Web3Button
+          contractAddress={checkboxes.contractAddress ? contractAddress : ""}
+          action={checkboxes.action ? action : undefined}
+          theme={checkboxes.theme ? theme : undefined}
+          contractAbi={checkboxes.contractAbi ? contractAbi : undefined}
+          overrides={checkboxes.overrides ? overrides : undefined}
+          onSuccess={checkboxes.onSuccess ? () => alert(onSuccess()) : undefined}
+          onError={checkboxes.onError ? () => alert(onError()) : undefined}
+          className={checkboxes.className ? className : undefined}
+        >
+          Execute Action
+        </Web3Button>
+      </div>
+    </div>
   </div>
- </div>
-</div>
   );
 };
 
