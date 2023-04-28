@@ -8,8 +8,8 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider activeChain="goerli">
       <Head>
-        <title>Your Page Title</title>
-        <meta name="description" content="A short description of your page" />
+        <title>thirdweb Web3Button Generator</title>
+        <meta name="description" content="A easy to use thirdweb Web3Button Generator" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
