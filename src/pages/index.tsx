@@ -2,16 +2,16 @@ import React, { useEffect, useState } from "react";
 import { Web3Button } from "@thirdweb-dev/react";
 import { CallOverrides, ethers } from "ethers";
 
-type ActionFn = (contract: any) => void;
+type ActionFn = (contract: any, actionName?: string) => void;
 
 const Home: React.FC = () => {
   const [contractAddress, setContractAddress] = useState<string>(`0x097b1c2094e4C199a390A5B8d087aE5584A3CA7f`);
-  const [action, setAction] = useState<ActionFn | string>(() => "console.log(contract)");
+  const [action, setAction] = useState<string>("console.log(contract)");
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [contractAbi, setContractAbi] = useState<string>(`[{ ... }]`);
   const [className, setClassName] = useState<string>(`custom-class`);
-  const [onSuccess, setOnSuccess] = useState<(result: any) => string>(() => (result: any) => `Success: ${result}`);
-  const [onError, setOnError] = useState<(error: any) => string>(() => (error: any) => `Something went wrong: ${error}`);
+  const [onSuccess, setOnSuccess] = useState<(result: any) => string>(() => (result: any) => `Success`);
+  const [onError, setOnError] = useState<(error: any) => string>(() => (error: any) => `Something went wrong`);
   
   const [copied, setCopied] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -413,7 +413,7 @@ const Home: React.FC = () => {
         <div className="flex justify-center">
           <Web3Button
             contractAddress={checkboxes.contractAddress ? contractAddress : ""}
-            action={checkboxes.action ? (typeof action === "string" ? new Function("contract", action) : action) : () => {}}
+            action={(success) => alert("THIS BUTTON DOES NOT WORK FOR YOUR FUNCION AT THE MOMENT IN THIS EDITOR PLEASE COPY FROM ABOVE AND IT SHALL WORK")}
             theme={checkboxes.theme ? theme : undefined}
             contractAbi={checkboxes.contractAbi ? contractAbi : undefined}
             overrides={checkboxes.overrides ? overrides : undefined}
