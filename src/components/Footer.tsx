@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Thirdweb
+          thirdweb
         </a>
         ).
       </p>
